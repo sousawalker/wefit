@@ -6,7 +6,7 @@ Seja bem vindo ao teste de backend da Wefit.
 
     docker-compose up -d
 
-o docker-compose vai criar um container de um MySQL e você poderá acessar via localhost:3306 e a senha do usuário **root** é **senha_root_123**
+O docker-compose vai criar um container de um MySQL e você poderá acessar via localhost:3306 e a senha do usuário **root** é **12345**
 
 ### Para iniciar o servidor express basta executar o seguinte comando:
 
@@ -16,6 +16,6 @@ ou
 
     yarn start
 
-Depois que concluir seu teste não de enviar o seu código junto a pasta data, nela está salvo o volume do MySQL criado pelo docker.
+Depois que concluir seu teste, não enviar o seu código junto com a pasta data. A pasta data é salvo o volume do MySQL criado pelo docker.
 
 Boa sorte =)
