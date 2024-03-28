@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "f57a7f8a-707a-48ab-8cf6-daf5ac780ef4",
+		"name": "WeFit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "369857"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "cadastro de usuários",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Carlos Alberto\",\r\n    \"email\": \"alberto.carlos@gmail.com\",\r\n    \"cnpj\": \"00.000.000/0001-00\",\r\n    \"cpf\": \"000.000.000-00\",\r\n    \"cellphone\": \"(11) 00000-0000\",\r\n    \"phone\": \"(11) 00000-0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualização de usuário",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Carlos Alberto\",\r\n    \"email\": \"alberto.carlos@gmail.com\",\r\n    \"cnpj\": \"00.000.000/0001-00\",\r\n    \"cpf\": \"000.000.000-00\",\r\n    \"cellphone\": \"(11) 00000-0000\",\r\n    \"phone\": \"(11) 00000-0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/899a69f3-36dd-4b65-bd52-c1f56cb1249f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"899a69f3-36dd-4b65-bd52-c1f56cb1249f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seleção de usuário",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/899a69f3-36dd-4b65-bd52-c1f56cb1249f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"899a69f3-36dd-4b65-bd52-c1f56cb1249f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remoção de usuários",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/fdd6f0fb-9140-407d-acb7-0fadde3534c4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"fdd6f0fb-9140-407d-acb7-0fadde3534c4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "cadastro de endereços",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zip\": \"00000-010\",\r\n    \"street\": \"Rua Central\",\r\n    \"number\": \"101\",\r\n    \"complement\": \"Apartamento 01\",\r\n    \"city\": \"São Paulo\",\r\n    \"state\": \"São Paulo\",\r\n    \"neighborhood\": \"Centro\",\r\n    \"userId\": \"5f267008-1d2b-4aab-bb6c-d88449186757\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addresses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualização de endereços",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zip\": \"00000-010\",\r\n    \"street\": \"Rua Central 01\",\r\n    \"number\": \"101\",\r\n    \"complement\": \"Apartamento 01\",\r\n    \"city\": \"São Paulo\",\r\n    \"state\": \"São Paulo\",\r\n    \"neighborhood\": \"Centro\",\r\n    \"userId\": \"5f267008-1d2b-4aab-bb6c-d88449186757\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addresses/ba0d210a-ebb1-4e9d-a5b1-6624aef31ab9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses",
+								"ba0d210a-ebb1-4e9d-a5b1-6624aef31ab9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seleção de endereço",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/addresses/f2616495-d2b6-443c-97da-053ac5d0e96e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses",
+								"f2616495-d2b6-443c-97da-053ac5d0e96e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remoção de endereços",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/addresses/f2616495-d2b6-443c-97da-053ac5d0e96e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses",
+								"f2616495-d2b6-443c-97da-053ac5d0e96e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
