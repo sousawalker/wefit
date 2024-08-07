@@ -1,0 +1,24 @@
+const fs = require('fs');
+
+function base64ToZip(base64String, outputFilePath) {
+  // Remove a parte "data:*/*;base64," se estiver presente
+  const base64Data = base64String.replace(/^data:.*;base64,/, '');
+
+  // Converte a string Base64 para um buffer
+  const buffer = Buffer.from(base64Data, 'base64');
+
+  // Escreve o buffer em um arquivo
+  fs.writeFile(outputFilePath, buffer, (err) => {
+    if (err) {
+      console.error('Erro ao escrever o arquivo:', err);
+    } else {
+      console.log('Arquivo ZIP criado com sucesso:', outputFilePath);
+    }
+  });
+}
+
+// Exemplo de uso
+const base64String = 'UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA=='; // Sua string Base64 aqui
+const outputFilePath = 'output.zip'; // Caminho para o arquivo de saída
+
+base64ToZip(base64String, outputFilePath);
